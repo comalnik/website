@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title>Comalnik</title>
+
+<style>
+    body {
+	text-align:left !important;
+        width: 35em;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+	background-color:#2E3440;
+
+	font-family: Tahoma, Verdana, Arial, sans-serif;
+    }
+
+
+:root{
+
+}
+
+
+
+ul{
+        list-style:none;
+	list-style-type:none;
+}
+
+
+ul summary{
+cursor: pointer;
+}
+
+
+ul li{
+position:relative;
+}
+ul summary::marker{
+	display:none !important;
+}
+
+
+ul li::before{
+position:absolute;
+left:-10px;
+top:0px;
+content: "";
+width:8px;
+height:1em;
+}
+
+ul li::after{
+	position:absolute;
+	left:-10px;
+	bottom:0px;
+	border-left:2px solid red;
+	content: "";
+	width:8px;
+	height:100%;
+}
+
+/*
+ul li:last-child::after{
+	display:none;
+}
+*/
+
+
+ul.tree > li:after,ul.tree > li:before{
+	display:none;
+}
+
+
+
+
+
+
+
+/*navbar*/
+
+.navbar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    width: 100%;
+    height: 90px;
+    text-align: center;
+    background-color: #ccd4bf;
+}
+
+.unlink{
+	text-decoration:none;	
+	color:#bf616a !important;
+	font-size: 450%;
+
+}
+
+
+
+/*
+.pagetitle{
+    left: 0;
+    position: fixed;
+    top: 90px;
+    z-index: 2;
+    height: 30px;
+    width: 100%;
+    background-color: #1e2124;
+    text-align: center;
+    box-shadow: inset 0px 10px 10px 5px rgba(0, 0, 0, 0.26);
+}
+  
+.pagetitletext{
+    color: rgb(207, 207, 207);
+    font-size: 20px;
+    margin-top: 6px;
+    text-decoration: none;
+    font-family: 'josefinsans', sans-serif;
+}
+
+*/
+.floating{
+    animation-name: floating;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+</head>
+
+
+<body>
+
+    <div class="navbar">
+        <div class="floating">  
+            <a class="unlink" href="https://comalnik.com">Comalnik | ᚲᛟᛗᚨᛚᚾᛁᚲ</a>
+        </div>
+    </div>
+
+
+
+<h1>Welcome to my website!</h1>
+<p>Dobrodosli na moji spletni strani.</p>
+<em>Thank you for using nginx.</em></p>
+
+
+<ul class="tree">
+        <li>
+                <details>
+                        <summary>prvi</summary>
+                        <ul>
+                                <li>drugi</li>
+                                <li>
+                                        <details>
+                                                <summary>tretji</summary>
+                                                <ul>
+                                                        <li>prvi</li>
+                                                        <li>drugi</li>
+                                                        <li>tretji</li>
+                                                </ul>
+                                        </details>
+
+				</li>
+			</ul>
+		</details>
+	</li>
+
+	        <li>
+                <details>
+                        <summary>prvi2</summary>
+                        <ul>
+                                <li>drugi2</li>
+                                <li>
+                                        <details>
+                                                <summary>tretji2</summary>
+                                                <ul>
+                                                        <li>prvi2</li>
+                                                        <li>drugi2</li>
+                                                        <li>tretji2</li>
+                                                </ul>
+                                        </details>
+
+                                </li>
+                        </ul>
+                </details>
+        </li>
+
+
+
+</ul>
+
+</body>
+
+
+</html>
