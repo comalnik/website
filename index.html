@@ -2,30 +2,106 @@
 <html>
 
 <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <title>Comalnik</title>
 
 <style>
-    body {
-	text-align:left !important;
-        width: 35em;
-        margin: 0 auto;
-        display: flex;
-        flex-direction: column;
-	background-color:#2E3440;
-
-	font-family: Tahoma, Verdana, Arial, sans-serif;
-    }
-
-
-:root{
-
+@font-face {
+    font-family: Overpass;
+    font-weight: normal;
+    src: url('overpass-mono-regular.otf') format("opentype");
+}
+        
+@font-face {
+    font-family: Overpass;
+    font-weight: light;
+    src: url('overpass-mono-light.otf') format("opentype");
+}
+@font-face {
+  font-family: 'Quicksand';
+  src: url('quicksand.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
 }
 
 
+
+body {
+
+	background-color:#181926;
+}
+a {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
+
+ul{
+  list-style:none;
+	list-style-type:none;
+}
+
+
+ul summary{
+cursor: pointer;
+}
+
+
+ul li{
+position:relative;
+}
+ul summary::marker{
+	display:none !important;
+}
+
+a {
+  color: blue;
+  text-decoration: none;
+  position: relative;
+  display: inline-block;
+}
+
+a::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background:  #f5bde6;
+  transition: background 0.3s;
+}
+
+a:hover {
+  color: white;
+}
+
+a:hover::after,
+a:focus::after {
+  background:  #8bd5ca;
+}
+
+
+.title-container {
+      display: flex;
+      align-items: center;
+    }
+    
+    .title-container h1,
+    .title-container h2,
+    .title-container h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+    }
+    .title-container h1 {
+        margin-right: 15px;
+    }
+    .title-container h2 {
+        margin-right: 15px;
+    }
+.menu-container {
+        font-family:quicksand;
+}
+
+/* lines */
 
 ul{
         list-style:none;
@@ -59,7 +135,7 @@ ul li::after{
 	position:absolute;
 	left:-10px;
 	bottom:0px;
-	border-left:2px solid red;
+	border-left:2px solid #363a4f;
 	content: "";
 	width:8px;
 	height:100%;
@@ -76,161 +152,155 @@ ul.tree > li:after,ul.tree > li:before{
 	display:none;
 }
 
+/*animated text*/
 
-
-
-
-
-
-/*navbar*/
-
-	
-/*REPLACE WITH CATPUCCIN THEME COLORS!!!!! */	
-	
-.navbar{
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 2;
-    width: 100%;
-    height: 90px;
-    text-align: center;
-    background-color: #434c5e;
-}
-
-.unlink{
-	text-decoration:none;	
-	color:#b48ead !important;
-	font-size: 450%;
-
-}
-
-
-
-/*
-.pagetitle{
-    left: 0;
-    position: fixed;
-    top: 90px;
-    z-index: 2;
-    height: 30px;
-    width: 100%;
-    background-color: #1e2124;
-    text-align: center;
-    box-shadow: inset 0px 10px 10px 5px rgba(0, 0, 0, 0.26);
-}
   
-.pagetitletext{
-    color: rgb(207, 207, 207);
-    font-size: 20px;
-    margin-top: 6px;
-    text-decoration: none;
-    font-family: 'josefinsans', sans-serif;
+  
+.gradient-text {
+  background: linear-gradient(to right, #55CDFC, #F7A8B8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-*/
-.floating{
-    animation-name: floating;
-    animation-duration: 5s;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
+
+
+.rainbowText:hover{background-image: linear-gradient(to right, #55CDFC, #F7A8B8 , #FFFFFF, #F7A8B8, #55CDFC);animation: gradient-border 2s linear infinite;background-size: 400% 100%;color: transparent !important;-webkit-background-clip: text;}
+  @keyframes gradient-border{0%, 200% {background-position: 0 0;}99.999999999999999% {background-position: -130% 0;}}
+
+
+  .about-main {
+  display: block;
 }
-
-style attribute {
-    --primary: #000000;
-    --secondary: #ffffff;
-    --primbuttn: #4685ff;
-    --secbuttn: #f2f2f2;
-    --accent: #ffb084;
-    --darkreader-bg--primary: #000000;
-    --darkreader-text--primary: #e8e6e3;
-    --darkreader-bg--secondary: #181a1b;
-    --darkreader-text--secondary: #e8e6e3;
-    --darkreader-border--secondary: #303436;
-    --darkreader-bg--primbuttn: #0037a2;
-    --darkreader-text--primbuttn: #4aa3ff;
-    --darkreader-border--primbuttn: #00369e;
-    --darkreader-bg--secbuttn: #1f2223;
-    --darkreader-border--secbuttn: #34383a;
-    --darkreader-bg--accent: #7d2d00;
-    --
-
-
-
-
 
 
 
 </style>
 
-
-
 </head>
-
 
 <body>
 
-    <div class="navbar">
-        <div class="floating">  
-            <a class="unlink" href="https://comalnik.com">Comalnik | ᚲᛟᛗᚨᛚᚾᛁᚲ</a>
-        </div>
-    </div>
+
+<div class="title-container">
+<h1 style="font-family:quicksand; font-size:50px; color:#f4dbd6; ">Hey, I am </h1>
 
 
+<!-- add gradient/animation. Also possibly animate main dropdown titles -->
+<h2 class="gradient-text rainbowText" style="font-family:quicksand; font-size:50px; "> Comalnik</h2> 
 
-<h1>Welcome to my website!</h1>
-	
-<h1>Welcome to the website of <span class="color-effect">Comalnik</span></h1>
-<p>Dobrodosli na moji spletni strani.</p>
-<em>Thank you for using nginx.</em></p>
+<h3 class="" style="font-family:quicksand; font-size:50px; color:#f4dbd6; ">♥</h3> 
+
+</div>
 
 
-<ul class="tree">
+<!-- possibly merge uls-->
+
+<div class="menu-container">
+<ul class="tree menu align-center expanded text-center SMN_effect-29 about-main">
         <li>
                 <details>
-                        <summary>prvi</summary>
+                        <summary style="font-family:quicksand; font-size:35px; color:#f5bde6;">About me</summary>
                         <ul>
-                                <li>drugi</li>
-                                <li>
-                                        <details>
-                                                <summary>tretji</summary>
-                                                <ul>
-                                                        <li>prvi</li>
-                                                        <li>drugi</li>
-                                                        <li>tretji</li>
-                                                </ul>
-                                        </details>
-
-				</li>
-			</ul>
-		</details>
-	</li>
-
-	        <li>
-                <details>
-                        <summary>prvi2</summary>
-                        <ul>
-                                <li>drugi2</li>
-                                <li>
-                                        <details>
-                                                <summary>tretji2</summary>
-                                                <ul>
-                                                        <li>prvi2</li>
-                                                        <li>drugi2</li>
-                                                        <li>tretji2</li>
-                                                </ul>
-                                        </details>
-
-                                </li>
+                                <li style="font-family:quicksand; font-size:25px; color:#eed49f;" >I am a person on the internet that likes computers, anime and everything in between.</li>
+                                <li style="font-family:quicksand; font-size:25px; color:#eed49f;" >This site was made with 0% JavaScript and 100% simplicity.</li>
                         </ul>
                 </details>
         </li>
+ </ul>
+
+ <ul class="tree menu align-center expanded text-center SMN_effect-29">
+         <li>
+                 <details>
+                         <summary style="font-family:quicksand; font-size:35px; color:#91d7e3;">My projects</summary>
+                         <ul>
+                                <li>
+                                        <details>
+                                                <summary style="font-family:quicksand; font-size:30px; color:#eed49f;">Photography</summary>
+
+
+                                                <ul>
+                                                     <li><a style="font-family:quicksand; font-size:25px; color:#8aadf4;" href="https://foto.comalnik.com">My photo gallery</a></li>
+  
+                                                </ul>
+                                        </details> 
+                                        
+                                        
+                                                      
+                                             
+                                </li>
+                                <li>
+                                        <details>
+                                                <summary style="font-family:quicksand; font-size:30px; color:#b7bdf8;">Programming</summary>
+                                                <ul>
+                                                    <li><a style="font-family:quicksand; font-size:25px; color:#eed49f;" href="https://github.com/comalnik/photo-site">Picture gallery webapp</a></li>
+                                                    <li><a style="font-family:quicksand; font-size:25px; color:#7dc4e4;" href="https://github.com/comalnik/dotfiles">My arch linux dotfiles</a></li>
+                                                    <li><a style="font-family:quicksand; font-size:25px; color:#b7bdf8;" href="https://librex.comalnik.com">LibreX</a></li>
+                                                     <li><a style="font-family:quicksand; font-size:25px; color:#c6a0f6;" href="http://aigkzxd6ct6yjfvgi4yafwy2uzpavfpca6jz2m6govmceg5q3dizxdid.onion/">This site on TOR</a></li>
+                                                     <li><a style="font-family:quicksand; font-size:25px; color:#c6a0f6;" href="http://librex.aigkzxd6ct6yjfvgi4yafwy2uzpavfpca6jz2m6govmceg5q3dizxdid.onion">LibreX on TOR</a></li>
+                                                     
+                                                <li>
+                                                        <details>
+                                                                <summary style="font-family:quicksand; font-size:30px; color:#b7bdf8;">This website</summary>
+                                                                <ul>
+                  
+                                                                    <li><a style="font-family:quicksand; font-size:25px; color:#8aadf4;" href="https://github.com/comalnik/comalnik.com">Source code</a></li>
+                                                                    <li style="font-family:quicksand; font-size:25px; color:#eed49f;">This is my personal wesite, hosted on a 10 year old pc running debian.</li>
+                                                                </ul>
+                                                        </details>
+                                                </li>
+
+                                                </ul>
+                                        </details>
+                                </li>
 
 
 
-</ul>
+
+
+                         </ul>
+                 </details>
+         </li>
+  </ul>
+
+
+  <ul class="tree menu align-center expanded text-center SMN_effect-29">
+        <li>
+                <details>
+                        <summary style="font-family:quicksand; font-size:35px; color:#b7bdf8;">Socials</summary>
+                        <ul>
+                                <li><a style="font-family:quicksand; font-size:25px; color:#c6a0f6;" href="https://github.com/comalnik">Github: comalnik</a></li>
+                                <li><a style="font-family:quicksand; font-size:25px; color:#8aadf4;" href="https://steamcommunity.com/id/comalnik">Steam: comalnik</a></li>
+                                <li><a style="font-family:quicksand; font-size:25px; color:#8aadf4;" href="https://discord.com/users/787121753830850561">Discord: @comalnik (787121753830850561)</a></li>
+                                <li><a style="font-family:quicksand; font-size:25px; color:#f5a97f;" href="https://www.reddit.com/user/comalnik">Reddit: /u/comalnik</a></li>
+                                <li><a style="font-family:quicksand; font-size:25px; color:#f5bde6;" href="mailto:">Email:</a></li>
+                                
+                                
+                        <li>
+                        <details>
+                                        <summary style="font-family:quicksand; font-size:35px; color:#b7bdf8;">GPG</summary>
+                                        <ul>
+                                                <li><a style="font-family:quicksand; font-size:25px; color:#f5a97f;" href="gpg.txt">23B0 6E11 0F7E 8ABB 6A95  DCE2 D80E 0B2F 2551 10D1</a></li> 
+                                        </ul>
+                                </details>
+                        </li>
+
+
+                                
+                        </ul>
+                </details>
+
+        </li>
+ </ul>
+
+</div>
+<!--
+  <p> 🏳️‍⚧️ </p>  
+-->
+
+
 
 </body>
 
-
 </html>
+
+
