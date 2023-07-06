@@ -3,18 +3,11 @@
 
 <head>
 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="UTF-8" />
+
 <style>
-@font-face {
-    font-family: Overpass;
-    font-weight: normal;
-    src: url('overpass-mono-regular.otf') format("opentype");
-}
-        
-@font-face {
-    font-family: Overpass;
-    font-weight: light;
-    src: url('overpass-mono-light.otf') format("opentype");
-}
+
 @font-face {
   font-family: 'Quicksand';
   src: url('quicksand.ttf') format('truetype');
@@ -22,43 +15,19 @@
   font-style: normal;
 }
 
-
-
 body {
 
-	background-color:#181926;
-}
-a {
-  display: inline-block;
-  margin-bottom: 10px;
+        background-color:#181926;
 }
 
 
-ul{
-  list-style:none;
-	list-style-type:none;
-}
-
-
-ul summary{
-cursor: pointer;
-}
-
-
-ul li{
-position:relative;
-}
-ul summary::marker{
-	display:none !important;
-}
 
 a {
-  color: blue;
   text-decoration: none;
   position: relative;
   display: inline-block;
+  margin-bottom: 10px;
 }
-
 a::after {
   content: '';
   position: absolute;
@@ -69,17 +38,13 @@ a::after {
   background:  #f5bde6;
   transition: background 0.3s;
 }
-
 a:hover {
   color: white;
 }
-
 a:hover::after,
 a:focus::after {
   background:  #8bd5ca;
 }
-
-
 .title-container {
       display: flex;
       align-items: center;
@@ -102,26 +67,19 @@ a:focus::after {
 }
 
 /* lines */
-
 ul{
         list-style:none;
 	list-style-type:none;
 }
-
-
 ul summary{
 cursor: pointer;
 }
-
-
 ul li{
 position:relative;
 }
 ul summary::marker{
 	display:none !important;
 }
-
-
 ul li::before{
 position:absolute;
 left:-10px;
@@ -130,7 +88,6 @@ content: "";
 width:8px;
 height:1em;
 }
-
 ul li::after{
 	position:absolute;
 	left:-10px;
@@ -140,30 +97,17 @@ ul li::after{
 	width:8px;
 	height:100%;
 }
-
-/*
-ul li:last-child::after{
-	display:none;
-}
-*/
-
-
 ul.tree > li:after,ul.tree > li:before{
 	display:none;
 }
 
 /*animated text*/
 
-  
-  
 .gradient-text {
   background: linear-gradient(to right, #55CDFC, #F7A8B8);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-
-
-
 .rainbowText:hover{background-image: linear-gradient(to right, #55CDFC, #F7A8B8 , #FFFFFF, #F7A8B8, #55CDFC);animation: gradient-border 2s linear infinite;background-size: 400% 100%;color: transparent !important;-webkit-background-clip: text;}
   @keyframes gradient-border{0%, 200% {background-position: 0 0;}99.999999999999999% {background-position: -130% 0;}}
 
@@ -172,28 +116,18 @@ ul.tree > li:after,ul.tree > li:before{
   display: block;
 }
 
-
-
 </style>
 
 </head>
 
 <body>
 
-
 <div class="title-container">
 <h1 style="font-family:quicksand; font-size:50px; color:#f4dbd6; ">Hey, I am </h1>
-
-
-<!-- add gradient/animation. Also possibly animate main dropdown titles -->
 <h2 class="gradient-text rainbowText" style="font-family:quicksand; font-size:50px; "> Comalnik</h2> 
-
 <h3 class="" style="font-family:quicksand; font-size:50px; color:#f4dbd6; ">♥</h3> 
-
 </div>
 
-
-<!-- possibly merge uls-->
 
 <div class="menu-container">
 <ul class="tree menu align-center expanded text-center SMN_effect-29 about-main">
@@ -222,11 +156,7 @@ ul.tree > li:after,ul.tree > li:before{
                                                      <li><a style="font-family:quicksand; font-size:25px; color:#8aadf4;" href="https://foto.comalnik.com">My photo gallery</a></li>
   
                                                 </ul>
-                                        </details> 
-                                        
-                                        
-                                                      
-                                             
+                                        </details>     
                                 </li>
                                 <li>
                                         <details>
@@ -240,7 +170,7 @@ ul.tree > li:after,ul.tree > li:before{
                                                      
                                                 <li>
                                                         <details>
-                                                                <summary style="font-family:quicksand; font-size:30px; color:#b7bdf8;">This website</summary>
+                                                                <summary style="font-family:quicksand; font-size:25px; color:#b7bdf8;">This website</summary>
                                                                 <ul>
                   
                                                                     <li><a style="font-family:quicksand; font-size:25px; color:#8aadf4;" href="https://github.com/comalnik/comalnik.com">Source code</a></li>
@@ -252,16 +182,10 @@ ul.tree > li:after,ul.tree > li:before{
                                                 </ul>
                                         </details>
                                 </li>
-
-
-
-
-
                          </ul>
                  </details>
          </li>
   </ul>
-
 
   <ul class="tree menu align-center expanded text-center SMN_effect-29">
         <li>
@@ -277,15 +201,13 @@ ul.tree > li:after,ul.tree > li:before{
                                 
                         <li>
                         <details>
-                                        <summary style="font-family:quicksand; font-size:35px; color:#b7bdf8;">GPG</summary>
+                                        <summary style="font-family:quicksand; font-size:25px; color:#b7bdf8;">GPG</summary>
                                         <ul>
                                                 <li><a style="font-family:quicksand; font-size:25px; color:#f5a97f;" href="gpg.txt">23B0 6E11 0F7E 8ABB 6A95  DCE2 D80E 0B2F 2551 10D1</a></li> 
                                         </ul>
                                 </details>
                         </li>
 
-
-                                
                         </ul>
                 </details>
 
@@ -296,9 +218,6 @@ ul.tree > li:after,ul.tree > li:before{
 <!--
   <p> 🏳️‍⚧️ </p>  
 -->
-
-
-
 </body>
 
 </html>
