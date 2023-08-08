@@ -1,0 +1,116 @@
+
+@font-face {
+    font-family: 'Quicksand';
+    src: url('quicksand.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+  
+
+
+body {
+  
+      background-color:#181926;
+   
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+}
+  
+  
+/*LINKS*/  
+a {
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family:quicksand; 
+    font-size:25px; 
+    color:#eed49f;
+
+
+
+
+}
+a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background:  #f5bde6;
+    transition: background 0.3s;
+}
+a:hover {
+    color: white;
+}
+a:hover::after,
+a:focus::after {
+    background:  #8bd5ca;
+}
+
+
+/*Main*/
+.main {
+    display: inline-block;
+    max-width: 75vw;
+    padding: 1em;
+    align-items: center !important;
+
+}
+
+
+/*Title*/
+.title-container {
+    display: flex;
+    align-items: center !important;
+    justify-content: center;
+    background-color: #45475a;
+    padding-top:20px;
+    padding-bottom:10px;
+    border-radius: 10px 10px 3px 3px;
+    margin:7px;
+}
+      
+/*Content*/
+.main-container {
+    margin:7px;
+    padding: 20px;
+    background-color: #45475a;
+    font-family:quicksand;
+    font-size:25px;
+    color:#cdd6f4;
+}
+
+
+.contm {
+    border-radius: 3px 3px 3px 3px;
+
+}
+.conto {
+    border-radius: 3px 3px 10px 10px;
+
+}
+  
+
+/*animated text*/
+  
+.gradient-text {
+    background: linear-gradient(to right, #55CDFC, #F7A8B8);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+.gradient-text::after {
+    content: none;
+}
+
+
+.gradient-text:hover{background-image: linear-gradient(to right, #55CDFC, #F7A8B8 , #FFFFFF, #F7A8B8, #55CDFC);animation: gradient-border 2s linear infinite;background-size: 400% 100%;color: transparent !important;-webkit-background-clip: text;}
+    @keyframes gradient-border{0%, 200% {background-position: 0 0;}99.999999999999999% {background-position: -130% 0;}}
+  
+  
+.about-main {
+    display: block;
+}

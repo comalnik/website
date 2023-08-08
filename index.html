@@ -2,219 +2,88 @@
 <html>
 
 <head>
-
+        <link rel="stylesheet" type="text/css" href="style.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <meta charset="UTF-8" />
 
-<style>
 
-@font-face {
-  font-family: 'Quicksand';
-  src: url('quicksand.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-body {
-
-        background-color:#181926;
-}
-
-
-
-a {
-  text-decoration: none;
-  position: relative;
-  display: inline-block;
-  margin-bottom: 10px;
-}
-a::after {
-  content: '';
-  position: absolute;
-  bottom: -2px;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background:  #f5bde6;
-  transition: background 0.3s;
-}
-a:hover {
-  color: white;
-}
-a:hover::after,
-a:focus::after {
-  background:  #8bd5ca;
-}
-.title-container {
-      display: flex;
-      align-items: center;
-    }
-    
-    .title-container h1,
-    .title-container h2,
-    .title-container h3 {
-      margin-top: 0;
-      margin-bottom: 0;
-    }
-    .title-container h1 {
-        margin-right: 15px;
-    }
-    .title-container h2 {
-        margin-right: 15px;
-    }
-.menu-container {
-        font-family:quicksand;
-}
-
-/* lines */
-ul{
-        list-style:none;
-	list-style-type:none;
-}
-ul summary{
-cursor: pointer;
-}
-ul li{
-position:relative;
-}
-ul summary::marker{
-	display:none !important;
-}
-ul li::before{
-position:absolute;
-left:-10px;
-top:0px;
-content: "";
-width:8px;
-height:1em;
-}
-ul li::after{
-	position:absolute;
-	left:-10px;
-	bottom:0px;
-	border-left:2px solid #363a4f;
-	content: "";
-	width:8px;
-	height:100%;
-}
-ul.tree > li:after,ul.tree > li:before{
-	display:none;
-}
-
-/*animated text*/
-
-.gradient-text {
-  background: linear-gradient(to right, #55CDFC, #F7A8B8);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-.rainbowText:hover{background-image: linear-gradient(to right, #55CDFC, #F7A8B8 , #FFFFFF, #F7A8B8, #55CDFC);animation: gradient-border 2s linear infinite;background-size: 400% 100%;color: transparent !important;-webkit-background-clip: text;}
-  @keyframes gradient-border{0%, 200% {background-position: 0 0;}99.999999999999999% {background-position: -130% 0;}}
-
-
-  .about-main {
-  display: block;
-}
-
-</style>
 
 </head>
 
 <body>
-
+<main>
 <div class="title-container">
-<h1 style="font-family:quicksand; font-size:50px; color:#f4dbd6; ">Hey, I am </h1>
-<h2 class="gradient-text rainbowText" style="font-family:quicksand; font-size:50px; "> Comalnik</h2> 
-<h3 class="" style="font-family:quicksand; font-size:50px; color:#f4dbd6; ">♥</h3> 
+
+<h style="font-family:quicksand; font-size:74px; color:#f4dbd6; ">Hey, I am <a href="https://comalnik.com" class="gradient-text" style="font-family:quicksand; font-size:74px;"> Comalnik</a>  ♥ </p>
+</div>
+
+<div class="main-container contm">
+
+<p>
+Welcome to my website :3
+<br>
+<br>
+I am just average person on the internet. I like technology, programming, photography and much more...
+<br>
+I use Arch GNU/Linux btw and have some projects that you can check out below.
+<br>
+<br>
+And this site... This is my personal website, that tries to emulate the simplicity of the old internet in a modern way.
+<br>
+The internet is turning into a corporate shithole, and this website is an escape from that.
+<br>
+It is running on pure html without any javascript, ads, trackers... hosted on my old pc running debian.
+
+</p>
+
+
 </div>
 
 
-<div class="menu-container">
-<ul class="tree menu align-center expanded text-center SMN_effect-29 about-main">
-        <li>
-                <details>
-                        <summary style="font-family:quicksand; font-size:35px; color:#f5bde6;">About me</summary>
-                        <ul>
-                                <li style="font-family:quicksand; font-size:25px; color:#eed49f;" >I am a person on the internet that likes computers, anime and everything in between.</li>
-                                <li style="font-family:quicksand; font-size:25px; color:#eed49f;" >This site was made with 0% JavaScript and 100% simplicity.</li>
-                        </ul>
-                </details>
-        </li>
- </ul>
 
- <ul class="tree menu align-center expanded text-center SMN_effect-29">
-         <li>
-                 <details>
-                         <summary style="font-family:quicksand; font-size:35px; color:#91d7e3;">My projects</summary>
-                         <ul>
-                                <li>
-                                        <details>
-                                                <summary style="font-family:quicksand; font-size:30px; color:#eed49f;">Photography</summary>
+<div class="main-container contm">
 
+        <p>
+                <h1 style="font-size: 35px; color: #f4dbd6;">My projects:</h1>
 
-                                                <ul>
-                                                     <li><a style="font-family:quicksand; font-size:25px; color:#8aadf4;" href="https://foto.comalnik.com">My photo gallery</a></li>
-  
-                                                </ul>
-                                        </details>     
-                                </li>
-                                <li>
-                                        <details>
-                                                <summary style="font-family:quicksand; font-size:30px; color:#b7bdf8;">Programming</summary>
-                                                <ul>
-                                                    <li><a style="font-family:quicksand; font-size:25px; color:#eed49f;" href="https://github.com/comalnik/photo-site">Picture gallery webapp</a></li>
-                                                    <li><a style="font-family:quicksand; font-size:25px; color:#7dc4e4;" href="https://github.com/comalnik/dotfiles">My arch linux dotfiles</a></li>
-                                                    <li><a style="font-family:quicksand; font-size:25px; color:#b7bdf8;" href="https://librex.comalnik.com">LibreX</a></li>
-                                                     <li><a style="font-family:quicksand; font-size:25px; color:#c6a0f6;" href="http://aigkzxd6ct6yjfvgi4yafwy2uzpavfpca6jz2m6govmceg5q3dizxdid.onion/">This site on TOR</a></li>
-                                                     <li><a style="font-family:quicksand; font-size:25px; color:#c6a0f6;" href="http://librex.aigkzxd6ct6yjfvgi4yafwy2uzpavfpca6jz2m6govmceg5q3dizxdid.onion">LibreX on TOR</a></li>
-                                                     
-                                                <li>
-                                                        <details>
-                                                                <summary style="font-family:quicksand; font-size:25px; color:#b7bdf8;">This website</summary>
-                                                                <ul>
-                  
-                                                                    <li><a style="font-family:quicksand; font-size:25px; color:#8aadf4;" href="https://github.com/comalnik/comalnik.com">Source code</a></li>
-                                                                    <li style="font-family:quicksand; font-size:25px; color:#eed49f;">This is my personal wesite, hosted on a 10 year old pc running debian.</li>
-                                                                </ul>
-                                                        </details>
-                                                </li>
+        My photo gallery: <a href="https:foto.comalnik.com">Website</a> | <a target="_blank" href="https://github.com/comalnik/photo-site">Github</a>
+        <br>
+        My Arch linux dotfiles: <a target="_blank" href="https://github.com/comalnik/dotfiles">Github</a>
+        <br>
+        My LibreX instance: <a target="_blank" href="https://librex.comalnik.com">Clearnet</a> | <a target="_blank" href="http://librex.aigkzxd6ct6yjfvgi4yafwy2uzpavfpca6jz2m6govmceg5q3dizxdid.onion">Tor</a>
+        <br>
+        This website: <a href="https://www.comalnik.com">Clearnet</a> | <a target="_blank" href="http://aigkzxd6ct6yjfvgi4yafwy2uzpavfpca6jz2m6govmceg5q3dizxdid.onion/">Tor</a> | <a target="_blank" href="https://github.com/comalnik/comalnik.com">Github</a>
 
-                                                </ul>
-                                        </details>
-                                </li>
-                         </ul>
-                 </details>
-         </li>
-  </ul>
-
-  <ul class="tree menu align-center expanded text-center SMN_effect-29">
-        <li>
-                <details>
-                        <summary style="font-family:quicksand; font-size:35px; color:#b7bdf8;">Socials</summary>
-                        <ul>
-                                <li><a style="font-family:quicksand; font-size:25px; color:#c6a0f6;" href="https://github.com/comalnik">Github: comalnik</a></li>
-                                <li><a style="font-family:quicksand; font-size:25px; color:#8aadf4;" href="https://steamcommunity.com/id/comalnik">Steam: comalnik</a></li>
-                                <li><a style="font-family:quicksand; font-size:25px; color:#8aadf4;" href="https://discord.com/users/787121753830850561">Discord: @comalnik (787121753830850561)</a></li>
-                                <li><a style="font-family:quicksand; font-size:25px; color:#f5a97f;" href="https://www.reddit.com/user/comalnik">Reddit: /u/comalnik</a></li>
-                                <li><a style="font-family:quicksand; font-size:25px; color:#f5bde6;" href="mailto:">Email:</a></li>
-                                
-                                
-                        <li>
-                        <details>
-                                        <summary style="font-family:quicksand; font-size:25px; color:#b7bdf8;">GPG</summary>
-                                        <ul>
-                                                <li><a style="font-family:quicksand; font-size:25px; color:#f5a97f;" href="gpg.txt">23B0 6E11 0F7E 8ABB 6A95  DCE2 D80E 0B2F 2551 10D1</a></li> 
-                                        </ul>
-                                </details>
-                        </li>
-
-                        </ul>
-                </details>
-
-        </li>
- </ul>
-
+        </p>
+        
+        
 </div>
+
+<div class="main-container conto">
+
+        <p>
+                <h1 style="font-size: 35px; color: #f4dbd6;">Socials:</h1>
+
+         <a target="_blank" href="https://github.com/comalnik">Github</a>
+        
+         <a target="_blank" href="https://steamcommunity.com/id/comalnik">Steam</a>
+        
+        <a target="_blank" href="https://discord.com/users/787121753830850561">Discord</a>
+        
+         <a target="_blank" href="https://www.reddit.com/user/comalnik">Reddit</a>
+        
+         <a target="_blank" href="https://lemmy.world/u/Comalnik">Lemmy</a>
+        
+        <a href="mailto:">Mail</a>
+        
+        <a href="gpg.txt">GPG</a>
+        </p>
+        
+        
+</div>
+
+
+</main>
 <!--
   <p> 🏳️‍⚧️ </p>  
 -->
