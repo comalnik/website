@@ -4,14 +4,13 @@
 }
 
 
-
 @font-face {
     font-family: 'Quicksand';
     src: url('quicksand.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
-  
+
  @font-face {
     font-family: 'Maple';
     src: url('maple.woff2') format('woff2');
@@ -20,37 +19,35 @@
 }
 
 
-
-
 body {
-  
-      background-color:#181926;
-   
+
+      background-color:#1D1F21;
+
 
       display: flex;
       justify-content: center;
       align-items: center;
 
 
-      background-size: cover; 
-      background-repeat: no-repeat; 
-      background-attachment: fixed; 
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
 }
 
 
 
 
 
-  
-  
-/*LINKS*/  
+
+
+/*LINKS*/
 a {
     text-decoration: none;
     position: relative;
     display: inline-block;
     margin-bottom: 10px;
-    font-family:quicksand; 
-    font-size:25px; 
+    font-family:quicksand;
+    font-size:25px;
     font-weight: bold;
 
     color:#eed49f;
@@ -99,7 +96,7 @@ a:focus::after {
     border-radius: 10px 10px 3px 3px;
     margin:7px;
 }
-      
+
 /*Content*/
 .main-container {
     margin:7px;
@@ -108,7 +105,7 @@ a:focus::after {
 
     /*
     if exclude bgcolor; bg is transparent. try that with blurred bg img
-    
+
     background-color: rgba(29, 31, 33, 0.9);
     backdrop-filter: blur(5px);*/
 
@@ -127,10 +124,10 @@ a:focus::after {
     text-align: center;
 
 }
-  
+
 
 /*animated text*/
-  
+
 .gradient-text {
     background: linear-gradient(to right, #55CDFC, #F7A8B8);
     -webkit-background-clip: text;
@@ -143,8 +140,8 @@ a:focus::after {
 
 .gradient-text:hover{background-image: linear-gradient(to right, #55CDFC, #F7A8B8 , #FFFFFF, #F7A8B8, #55CDFC);animation: gradient-border 2s linear infinite;background-size: 400% 100%;color: transparent !important;-webkit-background-clip: text;}
     @keyframes gradient-border{0%, 200% {background-position: 0 0;}99.999999999999999% {background-position: -130% 0;}}
-  
-  
+
+
 .about-main {
     display: block;
 }
