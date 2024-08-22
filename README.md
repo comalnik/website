@@ -1,2 +1,2 @@
-# comalnik.com
-The source code for my website https://comalnik.com
+# website
+The source code for my website https://0w0.si

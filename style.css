@@ -1,5 +1,5 @@
 :root {
-    --bgColor: #1D1F21;
+    --bgColor: #black;
     --txtColor: #FAFF00;
 }
 
@@ -21,7 +21,7 @@
 
 body {
 
-      background-color:#1D1F21;
+      background-color:black;
 
 
       display: flex;
@@ -50,7 +50,7 @@ a {
     font-size:25px;
     font-weight: bold;
 
-    color:#eed49f;
+    color:rgb(26, 255, 26);
 
 
 
@@ -63,7 +63,7 @@ a::after {
     left: 0;
     width: 100%;
     height: 2px;
-    background:  #f5bde6;
+    background:  rgb(26, 255, 26);
     transition: background 0.3s;
 }
 a:hover {
@@ -95,6 +95,7 @@ a:focus::after {
     padding-bottom:10px;
     border-radius: 10px 10px 3px 3px;
     margin:7px;
+
 }
 
 /*Content*/
@@ -111,17 +112,21 @@ a:focus::after {
 
     font-family:maple;
     font-size:25px;
-    color:#cdd6f4;
+    color: rgb(26, 255, 255);
+    
+
 }
 
 
 .contm {
     border-radius: 3px 3px 3px 3px;
 
+
 }
 .conto {
     border-radius: 3px 3px 10px 10px;
     text-align: center;
+
 
 }
 
